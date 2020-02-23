@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts::header"></head>
+<body>
+<nav th:replace="layouts::navbar"></nav>
+<div class="container-fluid">
+<div class="row">
+    <div class="col-md-8">
+        <h3 class="mx-auto text-center">Current Projects</h3>
+    <table class="table table-striped table-bordered table-sm table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th>Project Id</th>
+            <th>Project Name</th>
+            <th>Project Stage</th>
+            <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="element:${project}">
+            <td th:text="${element.projectId}"></td>
+            <td th:text="${element.projectName}"></td>
+            <td th:text="${element.projectStage}"></td>
+            <td th:text="${element.description}"></td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+    <div class="col-md-4">
+        <h3 class="mx-auto text-center">Projects Progress Report</h3>
+        <canvas id="myPieChart" th:width="40" th:height="40"></canvas>
+        <script type="text/javascript">
+            let charData = "[[${projectStatus}]]";
+        </script>
+    </div>
+</div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="mx-auto text-center">Current Employees</h3>
+            <table class="table table-striped table-bordered table-hover table-sm">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Employee ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Project Count</th>
+                    <!--            <th>Project ID</th>-->
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="element:${employeeProjectCount}">
+                    <td th:text="${element.employeeId}"></td>
+                    <td th:text="${element.firstName}"></td>
+                    <td th:text="${element.lastName}"></td>
+                    <td th:text="${element.email}"></td>
+                    <td th:text="${element.projectCount}"></td>
+                    <!--            <td th:text="${element.getProject().projectId}"></td>-->
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" th:src="@{/js/myPieChart.js}"></script>
+</body>
+</html>

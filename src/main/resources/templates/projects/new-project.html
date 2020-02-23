@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layouts::header"></head>
+<body>
+<nav th:replace="layouts::navbar"></nav>
+<div class="container border">
+    <h1 class="mx-auto">Project Entry Form</h1>
+    <form class="form" action="/projects/save" method="post" th:object="${project}">
+        <div class="form-group">
+            <label for="name">Project Name</label>
+            <input class="form-control" type="text" name="project-name" th:field="${project.projectName}"/>
+        </div>
+        <div class="form-group">
+            <label for="stage">Project Stage</label>
+            <select class="form-control" name="project-stage" th:field="${project.projectStage}">
+                <option th:value="COMPLETED">COMPLETED</option>
+                <option th:value="NOTSTARTED">NOTSTARTED</option>
+                <option th:value="INPROGESS">INPROGESS</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="description">Project Description</label>
+            <textarea class="form-control" name="project-desc" th:field="${project.description}"/>
+        </div>
+        <div class="form-group">
+            <select th:field="*{employees}" multiple="multiple" class="form-control">
+                <option th:each="element:${allEmployees}"
+                        th:value="${element.employeeId}"
+                        th:text="${element.firstName}">
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="btn btn-primary" type="submit" value="Submit"/>
+            <input class="btn btn-warning" type="reset" value="Reset">
+
+        </div>
+    </form>
+</div>
+</body>
+</html>
