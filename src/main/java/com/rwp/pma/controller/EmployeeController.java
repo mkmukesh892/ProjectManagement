@@ -1,8 +1,8 @@
-package com.rwp.projectmanagement.controller;
+package com.rwp.pma.controller;
 
-import com.rwp.projectmanagement.dao.EmployeeRepository;
-import com.rwp.projectmanagement.dto.EmployeeProject;
-import com.rwp.projectmanagement.entities.Employee;
+import com.rwp.pma.dao.EmployeeRepository;
+import com.rwp.pma.dto.EmployeeProject;
+import com.rwp.pma.entities.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

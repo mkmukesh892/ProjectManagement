@@ -1,18 +1,12 @@
-package com.rwp.projectmanagement;
+package com.rwp.pma;
 
-import com.rwp.projectmanagement.dao.EmployeeRepository;
-import com.rwp.projectmanagement.dao.ProjectRepository;
-import com.rwp.projectmanagement.entities.Employee;
-import com.rwp.projectmanagement.entities.Project;
+import com.rwp.pma.dao.EmployeeRepository;
+import com.rwp.pma.dao.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 
-import java.util.Arrays;
-
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.rwp.pma","com.rwp.utils"})
 public class ProjectManagementApplication {
     @Autowired
     private EmployeeRepository employeeRepository;

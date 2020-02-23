@@ -1,9 +1,9 @@
-package com.rwp.projectmanagement.controller;
+package com.rwp.pma.controller;
 
-import com.rwp.projectmanagement.dao.EmployeeRepository;
-import com.rwp.projectmanagement.dao.ProjectRepository;
-import com.rwp.projectmanagement.entities.Employee;
-import com.rwp.projectmanagement.entities.Project;
+import com.rwp.pma.dao.EmployeeRepository;
+import com.rwp.pma.dao.ProjectRepository;
+import com.rwp.pma.entities.Employee;
+import com.rwp.pma.entities.Project;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,8 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Controller

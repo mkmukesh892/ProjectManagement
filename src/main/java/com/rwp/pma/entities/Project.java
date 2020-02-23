@@ -1,4 +1,4 @@
-package com.rwp.projectmanagement.entities;
+package com.rwp.pma.entities;
 
 import javax.persistence.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.rwp.projectmanagement.dto;
+package com.rwp.pma.dto;
 
 public interface ChartData {
     public String getLabel();

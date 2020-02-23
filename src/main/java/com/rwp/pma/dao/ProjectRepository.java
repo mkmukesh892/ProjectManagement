@@ -1,12 +1,11 @@
-package com.rwp.projectmanagement.dao;
+package com.rwp.pma.dao;
 
-import com.rwp.projectmanagement.dto.ChartData;
-import com.rwp.projectmanagement.entities.Project;
+import com.rwp.pma.dto.ChartData;
+import com.rwp.pma.entities.Project;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface ProjectRepository extends CrudRepository<Project, Long> {
     @Override

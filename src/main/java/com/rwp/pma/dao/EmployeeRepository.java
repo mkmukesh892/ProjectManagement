@@ -1,7 +1,7 @@
-package com.rwp.projectmanagement.dao;
+package com.rwp.pma.dao;
 
-import com.rwp.projectmanagement.dto.EmployeeProject;
-import com.rwp.projectmanagement.entities.Employee;
+import com.rwp.pma.dto.EmployeeProject;
+import com.rwp.pma.entities.Employee;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 
